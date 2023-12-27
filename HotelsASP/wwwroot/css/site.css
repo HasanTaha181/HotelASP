@@ -1,0 +1,53 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.card-img-top{
+  max-height:300px;
+  max-width:300px;
+}
+/*Details*/
+.mainBox {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.description {
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-width: 90%;
+}
+.right {
+  float: right;
+  width: 50%;
+}
+
+img {
+  width: 400px;
+  height: 400px;
+}
+

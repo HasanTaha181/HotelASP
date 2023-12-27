@@ -1,0 +1,35 @@
+@model List<Hotel>
+
+@{
+    ViewData["Title"] = "Hotels";
+}
+<h1>Hotels</h1>
+
+<p>
+    <a asp-controller="Hotels" asp-action="CreateHotel" class="btn btn-primary" style="float: right;width:8rem;">Add New</a>
+</p>
+<br><br>
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card" style="width: 20rem;margin-bottom: 15px;padding: 10px; margin-top: 0;">
+                    <img src="@item.ImgUrl" class="card-img-top" alt="Hotel Image">
+                    <h4 class="card-title">@item.Name</h4>
+                    <div class="text-center">
+                        @for (int i = 0; i < item.Rating; i++)
+                        {
+                            <i class="fa fa-star" style="color: goldenrod;" aria-hidden="true"></i>
+                        }
+                    </div>
+                     <p class="card-text"><span class="fw-bold">Location:</span> @item.Location</p>
+                    <div class="card-body">
+                        <a asp-controller="Hotels" asp-action="Details"  asp-route-id="@item.HotelId" class="btn btn-primary">View</a>
+                        <a asp-controller="Hotels" asp-action="Delete" asp-route-id="@item.HotelId" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

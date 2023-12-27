@@ -1,0 +1,18 @@
+@model HotelsASP.Models.Hotel
+@{
+    ViewData["Title"] = "Info";
+}
+<h1>@Model.Name</h1>
+<div class="mainBox">
+    <div class="left">
+        <p class="description"><span class="fw-bold">Description:</span> @Model.Description</p>
+        <p><span class="fw-bold">Rooms:</span> @Model.Rooms</p>
+        <p><span class="fw-bold">Location:</span> @Model.Location</p>
+        <p><span class="fw-bold">Phone:</span> @Model.Phone</p>
+        <p><span class="fw-bold">Rating:</span> @Model.Rating</p>
+    </div>
+    <div class="right">
+        <img src="@Model.ImgUrl" alt="Hotel Image"/>
+    </div>
+</div>
+<a href="@Url.Action("index", "Hotels")" style="width:8rem;" class="btn btn-primary">Back</a>

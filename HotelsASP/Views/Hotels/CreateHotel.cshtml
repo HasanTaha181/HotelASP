@@ -1,0 +1,52 @@
+@model HotelsASP.Models.Hotel
+
+@{
+    ViewData["Title"] = "Create Hotel";
+}
+
+<h2>Create Hotel</h2>
+
+    <form class="row g-3" method="post" asp-controller="Hotels" asp-action="CreateHotel" enctype="multipart/form-data">
+      <div class="col-md-6">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="Name" name="Name" required>
+      </div>
+      <div class="col-md-6">
+        <label for="Rooms" class="form-label">Rooms</label>
+        <input type="number" class="form-control" id="Rooms" name="Rooms" required>
+      </div>
+      <div class="col-12">
+        <label for="Location" class="form-label">Location</label>
+        <input type="text" class="form-control" id="Location" name="Location" required>
+      </div>
+      <div class="col-md-6">
+        <label for="Phone" class="form-label">Phone</label>
+        <input type="text" class="form-control" id="Phone" name="Phone" required>
+      </div>
+      <div class="col-md-6">
+        <label for="Rating" class="form-label">Rating</label>
+        <select class="form-select" id="Rating" name="Rating" required>
+          <option selected>Choose...</option>
+          <option value="1">1 Star</option>
+          <option value="2">2 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="5">5 Stars</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <label for="ImgUrl" class="form-label">Image</label>
+        <input type="text" class="form-control" id="ImgUrl" name="ImgUrl" required>
+      </div>
+      <div class="col-12">
+        <label for="Description" class="form-label">Description</label>
+        <textarea type="text" class="form-control" id="Description" name="Description" required></textarea>
+      </div>
+      <br>
+      <div class="col-12">
+        <button type="submit" style="width:8rem" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+    
+    
+    
